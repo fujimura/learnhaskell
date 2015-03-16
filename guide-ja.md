@@ -1,7 +1,6 @@
 # The Guide
 
-This is my recommended path for learning Haskell.
-
+これは、Haskellを学ぶにあたって、私のオススメする道のりです。
 
 ## For non-English speakers
 
@@ -21,58 +20,53 @@ This is my recommended path for learning Haskell.
 
 * [日本語で](guide-ja.md)
 
-#### Something to keep in mind: *don't sweat the stuff you don't understand immediately*. Just keep moving.
+#### 常に気をつけること: *すぐに理解できない事にこだわらないこと。* 動き続けよう。
 
-## Community
+## コミュニティ
 
-Our IRC channel is `#haskell-beginners` on Freenode.
+IRCチャンネルはFreenodeで `#haskell-begineers` です。
 
-IRC web client [here](http://webchat.freenode.net/).
 
-The haskell [mailing lists](https://wiki.haskell.org/Mailing_lists).
+IRCのWebクライアントはこちら: http://webchat.freenode.net/
 
-### Community Guidelines
+haskellの[メーリングリスト](https://wiki.haskell.org/Mailing_lists).
 
-[See Chris Done's post on teaching](http://chrisdone.com/posts/teaching)
+### コミュニティのガイドライン
 
-Be kind and courteous. Being mean or rude scares people off and makes people not want to participate.
+[Chris Doneの教えることについての投稿](http://chrisdone.com/posts/teaching)
 
-Low-effort criticism is for the benefit of the person delivering it, not the person receiving it.
+やさしく、礼儀正しくありましょう。悪意や無礼な態度は人々を怖がらせて、みんな関わりたくなくなってしまうます。
 
-Don't describe things as "easy" or "trivial". You'll making people feel terrible for having to work hard for their progress. Slow learners are often the most thorough learners, this is something to celebrate!
+意味のあまりない批評は当人にはいいかもしれませんが、受け取る人のためにはなりません。
 
-No feigning surprise. Don't act surprised when somebody says they don't know something. They'll feel terrible and you've accomplished nothing except to make yourself feel sharp.
+「簡単だ」だとか「トリビアルだ」と表現するのはやめましょう。You'll making people feel terrible for having to work hard for their progress. ゆっくり学ぶ人は得てして徹底的に学ぶ人です。これは賞賛に値することですよ！
 
-No well-actually's. When someone says something that's almost - but not entirely - correct, and you say, "well, actually…" and then give a minor correction. This is especially annoying when the correction has no bearing on the actual conversation. This doesn't mean Hacker School isn't about truth-seeking or that we don't care about being precise. Almost all well-actually's are about grandstanding, not truth-seeking.
+驚いたようなふりをしないでください。誰かが何かを知らなくても驚いたように振る舞わないでください。彼らは酷い思いをして、あなたは自分が鋭いって思うだけで何も実現しません。
 
-No back-seat driving. If you see people working through a problem, you shouldn't intermittently interject advice. Let them work it out unless someone asks for help. Avoiding interruptions is [one of the founding purposes of #haskell-beginners](http://chrisdone.com/posts/teaching). 
+「いやー実は」はやめてください。誰かが何かほとんど合っている、けど完全に合っているわけでない、ことを行った時、あなたは「いや、実は…」と言って細かい定性をします。これは、会話の内容と関係がない時、特にいらっとします。これはHacker Schoolが真実を追求していないというわけでも、私達が正確さに興味がないというわけもありません。ほとんどの「いや、実は」はgrandstandingで、真実の追求ではないです。
 
-No subtle -isms. Racism, sexism, homophobia, transphobia, and other kinds of bias are not welcome and will not be tolerated.
+バックシートから運転するようなことはやめましょう。誰かが問題に取り組んでいるとき、アドバイスをちょいちょい挟むべきでありません。助けを求められるまで、Let them work it out unless someone asks for help. Avoiding interruptionsは[#haskell-beginners創立の一つの目的です。](http://chrisdone.com/posts/teaching).
+
+○○主義はちょっとでもダメです。人種差別、性差別、ホモフォビア、トランスフォビア、それ以外の全てのバイアスは歓迎されないし、許容されません。
 
 ---
 
-Guidelines by [the Hacker School manual](https://www.hackerschool.com/manual). Thanks for releasing it Hacker School.
+ガイドラインは[the Hacker School manual](https://www.hackerschool.com/manual)によるものです. Hacker School、リリースしてくれてありがとう。
 
-# What are Haskell, GHC, and Cabal?
+# Haskellって何？GHC？Cabal？
 
-Haskell is a programming language as laid out in the reports, most recent one
-being in 2010. The report is available as the
-[onlinereport](http://www.haskell.org/onlinereport/haskell2010/).
+
+Haskellはレポートにまとめられたプログラミング言語です。最新のレポートは2010年のものです。レポートは[オンラインレポート](http://www.haskell.org/onlinereport/haskell2010/)として見れます。
 
 ## GHC
 
-[GHC](http://www.haskell.org/ghc/) is the most popular way to work in the
-Haskell language. It includes a compiler, REPL (interpreter), package
-management, and other things besides.
+[GHC](http://www.haskell.org/ghc/) は最もポピュラーなHaskellのコンパイラーで、Cabalと一緒にインストールされます。CabalはGHCと一緒に使われるプロジェクトと依存関係の管理を行うものです。
 
 ## Cabal
 
-[Cabal](https://www.haskell.org/cabal/download.html) does project management and
-dependency resolution. It's how you'll install projects, typically into their
-own sandbox.
+[Cabal](https://www.haskell.org/cabal/download.html) はプロジェクトの管理と依存関係の解決をしてくれます。これがプロジェクトをインストールする方法です。typically into their own sandbox.
 
-Cabal is equivalent to Ruby's Bundler, Python's pip, Node's NPM, Maven, etc. GHC
-manages packaging itself, Cabal chooses what versions to install.
+CabalはRubyのBundler、Pythonのpip、NodeのNPM、Mavenと同じようなものです。GHCがパッケージ自体の管理をやって、Cabalがどのバージョンをインストールするか選んでくれます。
 
 # Getting set-up
 
